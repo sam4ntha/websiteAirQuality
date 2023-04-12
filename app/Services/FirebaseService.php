@@ -22,4 +22,23 @@ class FirebaseService
         $registros = $reference->getValue();
         return $registros;
     }
+
+    public function addUser($email, $password, $displayName)
+    {
+        $auth = $this->firebase->createAuth();
+        $userProperties = [
+            'email' => $email,
+            'emailVerified' => false, //Si se necesita que se verifique el correo
+            'password' => $password,
+            'displayName' => $displayName,
+        ];
+        return $auth->createUser($userProperties);
+    }
+
+    public function signIn($email, $password)
+    {
+        $auth = $this->firebase->createAuth();
+        $signInResult = $auth->signInWithEmailAndPassword($email, $password);
+        return $signInResult;
+    }
 }
