@@ -23,6 +23,38 @@ class FirebaseService
         return $registros;
     }
 
+    public function updateLugar($value)
+    {
+        $updates = [
+            'prueba/lugarPrueba/municipio' => $value,//Nodos actualizables
+        ];
+        $this->db->getReference()->update($updates); //Que nodos se quieren actualizar
+    }
+
+    public function updateEstado($value)
+    {
+        $updates = [
+            'prueba/lugarPrueba/estado' => $value,//Nodos actualizables
+        ];
+        $this->db->getReference()->update($updates); //Que nodos se quieren actualizar
+    }
+
+    public function statePrueba()
+    {
+        /*
+       Estado de la prueba, temp hum, co2
+       [co2: 300 PPM,
+       hum: 28,
+       medAna: 156,
+       temp: 29,
+       voltaje: 1.5,
+       ]
+       */
+        $reference = $this->db->getReference('/prueba');
+        $registros = $reference->getValue();
+        return $registros;
+    }
+
     public function addUser($email, $password, $displayName)
     {
         $auth = $this->firebase->createAuth();
