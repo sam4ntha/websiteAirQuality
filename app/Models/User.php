@@ -31,4 +31,11 @@ class User {
         $result = $service->signIn($email, $password);
         return new User($result->data()['email'], $result->data()['displayName']);
     }
+
+    public static function addUser($email, $password, $displayName)
+    {
+        $service = new FirebaseService();
+        $result = $service->addUser($email, $password, $displayName);
+        return $result; //Pendiente
+    }
 }

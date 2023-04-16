@@ -23,6 +23,34 @@ class FirebaseService
         return $registros;
     }
 
+    public function co2Prueba()
+    {
+        $reference = $this->db->getReference('/prueba/co2');
+        $registros = $reference->getValue();
+        return $registros;
+    }
+
+    public function humPrueba()
+    {
+        $reference = $this->db->getReference('/prueba/hum');
+        $registros = $reference->getValue();
+        return $registros;
+    }
+
+    public function medidaAnalogicaPrueba()
+    {
+        $reference = $this->db->getReference('/prueba/medAna');
+        $registros = $reference->getValue();
+        return $registros;
+    }
+
+    public function voltajePrueba()
+    {
+        $reference = $this->db->getReference('/prueba/voltaje');
+        $registros = $reference->getValue();
+        return $registros;
+    }
+
     public function updateLugar($value)
     {
         $updates = [
