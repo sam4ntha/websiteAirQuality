@@ -31,7 +31,8 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" method="post" action="/login">
+				@csrf <!----Evitar ataques al sitio---->
 					<span class="login100-form-title p-b-26">
 						Bienvenido
 					</span>
@@ -39,8 +40,8 @@
                         <img class="rounded-circle" src={{ URL::asset("logoOf.png") }} alt="Air Quality" width="150" height="150">
 					</span>
 
-					<div class="wrap-input100 validate-input" data-validate = "Coreo válido es: a@b.c">
-						<input class="input100" type="text" name="email">
+					<div class="wrap-input100 validate-input" data-validate = "Correo válido es: a@b.c">
+						<input type="email" id="email" class="input100"  name="email">
 						<span class="focus-input100" data-placeholder="Email"></span>
 					</div>
 
@@ -48,7 +49,7 @@
 						<span class="btn-show-pass">
 							<i class="zmdi zmdi-eye"></i>
 						</span>
-						<input class="input100" type="password" name="pass">
+						<input  type="password" id="password" class="input100" name="pass">
 						<span class="focus-input100" data-placeholder="Password"></span>
 					</div>
 

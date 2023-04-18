@@ -99,8 +99,13 @@ class FirebaseService
 
     public function signIn($email, $password)
     {
+        $aUser = [];
         $auth = $this->firebase->createAuth();
         $signInResult = $auth->signInWithEmailAndPassword($email, $password);
+        $aUser['email'] = $signInResult->data()['displayName'];
+        $aUser['token'] = $signInResult->idToken();
         return $signInResult;
+
+        $this->token = $signInResult->idToken();
     }
 }

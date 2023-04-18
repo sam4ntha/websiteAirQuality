@@ -13,23 +13,27 @@ use App\Http\Controllers\LoginController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/register', function () {
-    return view('register');
-});
-
-Route::get('/login', [LoginController::class, 'index'])->name('login');
-
-Route::group(['middleware' =>['auth']], function(){
     Route::get('/', function () {
-        return view('dashboard');
+     return view('dashboard');
     });
 
-    Route::get('/profile', function () {
-        return view('profile');
-    });
+// Route::get('/login', [LoginController::class, 'index'])->name('login');
+// Route::post('/login', [LoginController::class, 'login']);
+
+// Route::get('/register', function () {
+//     return view('register');
+// });
+
+// Route::group(['middleware' =>['auth']], function(){
+//     Route::get('/', function () {
+//         return view('dashboard');
+//     });
+
+//     Route::get('/profile', function () {
+//         return view('profile');
+//     });
     
-});
+// });
 
 
 

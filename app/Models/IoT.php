@@ -55,6 +55,7 @@ class IoT {
                                     //  } ->se obtiene de los argumentos de la funcion public function getTemp(//$date)
                                     // // //}
         // return $temperaturaAcumulada/$contadorDia;
+        
     }
 
     public function getHum($test)

@@ -28,7 +28,7 @@
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Pruebas</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Acerca de</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#programs">Programas</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href=""><i class="fa-solid fa-right-from-bracket"></i></a></li>   
+                        <!-- <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href=""><i class="fa-solid fa-right-from-bracket"></i></a></li>    -->
                     </ul>
                 </div>
             </div>
@@ -97,12 +97,12 @@
                     <div class="col-lg-4 me-auto"><p class="lead">Air Quality es un dispositivo que se compone de distintos sensores, conectado a Internet y es asistido por una aplicacion móvil que monitorea la calidad del aire, tomando en cuenta el índice del dióxido de carbono en que se encuentra, la humedad y temperatura, notificando al usuario las variaciones en tiempo real. Air Quality permite medir el índice de calidad del aire, para obtener un control efectivo de la contaminación y reducir efectos contraproducentes en la salud de los seres vivos.</p></div>
                 </div>
                 <!-- About Section Button-->
-                <div class="text-center mt-4">
+                <!-- <div class="text-center mt-4">
                     <a class="btn btn-xl btn-outline-light" href="">
                         <i class="fas fa-download me-2"></i>
                         Air Quality
                     </a>
-                </div>
+                </div> -->
             </div>
         </section>
 
