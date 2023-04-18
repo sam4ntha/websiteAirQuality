@@ -69,9 +69,9 @@ class IoT {
         echo $value;
     }
 
-    public function getVoltaje($test)
+    public function getVelocidad($test)
     {
-        $value =$this->service->voltajePrueba();
+        $value =$this->service->velocidadPrueba();
         echo $value;
     }
 

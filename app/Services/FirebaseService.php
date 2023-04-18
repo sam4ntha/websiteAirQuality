@@ -13,41 +13,41 @@ class FirebaseService
 
     public function __construct()
     {
-        $this->firebase = (new Factory)->withServiceAccount('./key/air-quality-a5242-1e8311802124.json'); //se conecta a firebase usando una cuenta de servicio
+        $this->firebase = (new Factory)->withServiceAccount('./key/fotosfirebase-49f24-b99f190d869f.json'); //se conecta a firebase usando una cuenta de servicio
         $this->db = $this->firebase->createDatabase(); //Se conecta a la base de datos a traves de firebase
     }
 
     public function tempPrueba()
     {
-        $reference = $this->db->getReference('/prueba/temp');
+        $reference = $this->db->getReference('/Test/test/Temperatura');
         $registros = $reference->getValue();
         return $registros;
     }
 
     public function co2Prueba()
     {
-        $reference = $this->db->getReference('/prueba/co2');
+        $reference = $this->db->getReference('/Test/test/C02');
         $registros = $reference->getValue();
         return $registros;
     }
 
     public function humPrueba()
     {
-        $reference = $this->db->getReference('/prueba/hum');
+        $reference = $this->db->getReference('/Test/test/Humedad');
         $registros = $reference->getValue();
         return $registros;
     }
 
     public function medidaAnalogicaPrueba()
     {
-        $reference = $this->db->getReference('/prueba/medAna');
+        $reference = $this->db->getReference('/Test/test/Medida Analógica');
         $registros = $reference->getValue();
         return $registros;
     }
 
-    public function voltajePrueba()
+    public function velocidadPrueba()
     {
-        $reference = $this->db->getReference('/prueba/voltaje');
+        $reference = $this->db->getReference('/Test/test/Velocidad');
         $registros = $reference->getValue();
         return $registros;
     }
@@ -79,7 +79,7 @@ class FirebaseService
        voltaje: 1.5,
        ]
        */
-        $reference = $this->db->getReference('/prueba');
+        $reference = $this->db->getReference('/test');
         $registros = $reference->getValue();
         return $registros;
     }
