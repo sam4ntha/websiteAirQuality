@@ -4,6 +4,7 @@ namespace App\Services;
 require './vendor/autoload.php';
 
 use Kreait\Firebase\Factory;
+use Kreait\Firebase\Auth;
 
 class FirebaseService
 {
@@ -86,6 +87,7 @@ class FirebaseService
     public function addUser($email, $password, $displayName)
     {
         $auth = $this->firebase->createAuth();
+        
         $userProperties = [
             'email' => $email,
             'emailVerified' => false, //Si se necesita que se verifique el correo

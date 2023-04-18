@@ -25,17 +25,21 @@ class User {
         return $this->email;
     }
 
-    public static function createUser($email, $password)
+    public static function getUser($email, $password)
     {
+        //Obtener usuario que ya existe
         $service = new FirebaseService();
         $result = $service->signIn($email, $password);
         return new User($result->data()['email'], $result->data()['displayName']);
     }
 
-    public static function addUser($email, $password, $displayName)
+    public static function createUser($email, $password, $displayName)
     {
+        //Crear un usuario
         $service = new FirebaseService();
-        $result = $service->addUser($email, $password, $displayName);
-        return $result; //Pendiente
+        return $service->addUser($email, $password, $displayName);
+        // $result = $service->addUser($email, $password, $displayName);
+        // return $result; //Pendiente
+        
     }
 }

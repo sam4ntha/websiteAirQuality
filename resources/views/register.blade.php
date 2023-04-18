@@ -57,18 +57,18 @@
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
 							<button class="login100-form-btn">
-								Iniciar Sesión
+								Registrarme
 							</button>
 						</div>
 					</div>
 
 					<div class="text-center p-t-115">
 						<span class="txt1">
-							¿Aún no te has registrado?
+							¿Ya tienes una cuenta?
 						</span>
 
 						<a class="txt2" href="#">
-							Regístrate
+							Iniciar Sesión
 						</a>
 					</div>
 				</form>
